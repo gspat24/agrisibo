@@ -1,0 +1,7 @@
+{
+  "name": "agrisibo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
