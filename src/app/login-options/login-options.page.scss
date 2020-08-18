@@ -1,0 +1,88 @@
+.brand-logo {
+  height: 100px;
+  margin-top: 84px;
+  margin-bottom: 47.1px;
+}
+
+ion-grid {
+  --ion-grid-padding: 12px;
+}
+
+ion-item {
+  ion-icon {
+    z-index: 9;
+    margin: 0 auto;
+    align-self: center;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    padding: 0px 10px;
+    height: 38px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+ion-input {
+  margin-bottom: 10px;
+}
+
+ion-button {
+  margin-top: 16px;
+  margin-bottom: 50px;
+}
+
+ion-item {
+  --highlight-color-invalid: transparent;
+  --highlight-color-valid: transparent;
+  --border-color: transparent;
+  --inner-padding-end: 0;
+  --padding-start: 0;
+}
+
+.login-links {
+  margin-bottom: 48px;
+  font-size: 14px;
+  text-decoration-line: underline;
+}
+
+.invalid {
+  border: 1px solid var(--ion-color-danger);
+}
+
+/*
+Material Design classes for FORM 
+*/
+
+.label-floating {
+  transform: translate3d(0, 170%, 0);
+  --webkit-transform: translate3d(0, 170%, 0);
+  padding-left: 10px;
+  --color: var(--ion-color-tertiary);
+  font-size: 14px;
+}
+
+.item-has-focus .label-floating.sc-ion-input-md-h {
+  transform: translate3d(0, 25%, 0) scale(0.75);
+  --webkit-transform: translate3d(0, 25%, 0) scale(0.75);
+  --color: var(--ion-color-tertiary);
+}
+
+.item-has-value .label-floating.sc-ion-label-md-h {
+  transform: translate3d(0, 25%, 0) scale(0.75);
+  --webkit-transform: translate3d(0, 25%, 0) scale(0.75);
+}
+
+.item-has-focus .label-floating {
+  transform: translate3d(0, 25%, 0) scale(0.75);
+  --webkit-transform: translate3d(0, 25%, 0) scale(0.75);
+  --color: var(--ion-color-tertiary);
+}
+
+.item-label-floating .sc-ion-input-md-h {
+  --padding-start: 8px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}

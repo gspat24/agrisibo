@@ -1,0 +1,246 @@
+// Customize CSS Forms under form tag
+
+form {
+  background-color: white;
+
+  ion-grid {
+    --ion-grid-width-xl: 50%;
+    --ion-grid-width-lg: 50%;
+  }
+
+  ion-col {
+    --ion-grid-column-padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  ion-item {
+    --highlight-color-invalid: transparent;
+    --highlight-color-valid: transparent;
+    --highlight-background: transparent;
+    --border-color: transparent;
+    --inner-padding-end: 0;
+    --padding-start: 0;
+
+    &.item-select {
+      margin-top: 1.2rem;
+      padding-left: 10px;
+      --background: white;
+      box-sizing: border-box;
+      color: var(--ion-color-step-550, #949494);
+      border: solid 1px var(--ion-color-step-550, #949494);
+    }
+
+    div.error-message {
+      margin: 0;
+      margin-top: -4px;
+      display: flex;
+      color: var(--ion-color-danger);
+
+      i {
+        font-size: 0.8rem;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  ion-item {
+    ion-icon[name="chevron-down-outline"] {
+      margin: 0 auto;
+      align-self: center;
+      position: absolute;
+      right: 5px;
+      top: 36px;
+    }
+  }
+
+  ion-datetime {
+    border: solid 1px var(--ion-color-tertiary);
+    padding-left: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  ion-icon {
+    &.icon-calendar {
+      margin: 0 auto;
+      align-self: center;
+      position: absolute;
+      right: 5px;
+      top: 36px;
+    }
+
+    &.icon-camera {
+      height: 40px;
+      width: 56px;
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 2px;
+    }
+
+    &.icon-barcode {
+      height: 40px;
+      width: 56px;
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 2px;
+    }
+  }
+
+  ion-button {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+    height: 40px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+
+    &.button-icon {
+      margin: 0;
+      width: 50px;
+      margin-right: 4px;
+    }
+  }
+
+  ion-radio {
+    margin-right: 8px;
+  }
+
+  ion-text {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    font-weight: 700;
+  }
+
+  ion-input {
+    margin-bottom: 0.5rem;
+
+    &.select {
+      input {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Radio group title alignment
+  .col-radio {
+    --ion-grid-column-padding: 0;
+    padding-top: 6px;
+
+    ion-label {
+      &.label-title {
+        &.radio {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .invalid {
+    border: 1px solid var(--ion-color-danger);
+  }
+
+  .rotate {
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+  }
+}
+
+// Radio Button Customize CSS
+
+ion-radio {
+  --border-color: var(--ion-color-secondary);
+  --color: var(--ion-color-secondary);
+  --color-checked: var(--ion-color-primary);
+
+  &.radio-checked {
+    --border-color: var(--ion-color-secondary) !important;
+  }
+}
+
+/*
+    Material Design classes for FORM 
+  */
+
+// Stacked label
+
+.label-stacked.sc-ion-label-md-h {
+  margin-bottom: 8px;
+  --color: var(--ion-color-tertiary);
+  --color-focused: var(--ion-color-secondary);
+
+  .item-has-focus & {
+    color: var(--ion-color-secondary);
+  }
+}
+
+.item-label-stacked .sc-ion-input-md-h {
+  --padding-start: 8px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+
+  &.ion-valid.ion-touched {
+    border: 1px solid var(--ion-color-success) !important;
+  }
+
+  &.ion-invalid.ion-touched {
+    border: 1px solid var(--ion-color-danger) !important;
+  }
+}
+
+// Floating label
+
+.label-floating.sc-ion-label-md-h {
+  .item-has-focus & {
+    color: var(--ion-color-step-550, #949494) !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem !important;
+    line-height: 16px;
+  }
+
+  .item-has-value & {
+    transform: translate3d(0, 25%, 0) scale(0.75) !important;
+    --webkit-transform: translate3d(0, 25%, 0) scale(0.75) !important;
+  }
+}
+
+.item-has-focus {
+  & .label-floating.sc-ion-input-md-h {
+    transform: translate3d(0, 25%, 0) scale(0.75) !important;
+    --webkit-transform: translate3d(0, 25%, 0) scale(0.75) !important;
+  }
+
+  & .label-floating {
+    transform: translate3d(0, 25%, 0) scale(0.75) !important;
+    --webkit-transform: translate3d(0, 25%, 0) scale(0.75) !important;
+  }
+}
+
+.label-floating {
+  transform: translate3d(0, 170%, 0) !important;
+  --webkit-transform: translate3d(0, 170%, 0) !important;
+  padding-left: 10px;
+  --color: var(--ion-color-step-550, #949494) !important;
+  font-size: 1rem !important;
+}
+
+.item-label-floating {
+  & .sc-ion-input-md-h {
+    --padding-start: 8px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    border: 1px solid var(--ion-color-step-550, #949494) !important;
+  }
+
+  & .sc-ion-input-md-h.ion-invalid.ion-touched {
+    border: 1px solid var(--ion-color-danger) !important;
+  }
+
+  & .sc-ion-input-md-h.ion-valid.ion-touched {
+    border: 1px solid var(--ion-color-success) !important;
+  }
+}
