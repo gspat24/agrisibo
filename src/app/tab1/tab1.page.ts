@@ -24,7 +24,7 @@ export class Tab1Page {
     this.bars = new Chart(this.barChart.nativeElement, {
       type: 'bar',
       data: {
-        labels: ['Sayote', 'Cabbage', 'Pechay', 'Gabi', 'Sebuyas'],
+        labels: ['Sayote', 'Cabbage', 'Pechay', 'Gabi', 'Sibuyas'],
         datasets: [
           {
             label: 'Products Sold (vegetables/kl)',

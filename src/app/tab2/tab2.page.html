@@ -1,17 +1,72 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      My Store
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-list-header>
+      My Vegetables
+    </ion-list-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./vegetables/sayote.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Sayote</h2>
+        <h3><b>Price:</b> ₱80 per kilo </h3>
+        <p><b>Status:</b> Available <b>Kilo:</b> 50 </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./vegetables/cabbage.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Cabbage</h2>
+        <h3><b>Price:</b> ₱80 per kilo </h3>
+        <p><b>Status:</b> To be harvest. </p>
+        <p><b>Harvest Date: </b> 2020/08/21 </p>
+        <p><b>Estimated Kilo: </b> 30 </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./vegetables/pechay.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Pechay</h2>
+        <h3><b>Price:</b> ₱60 per kilo </h3>
+        <p><b>Status:</b> Available <b>Kilo:</b> 44 </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./vegetables/gabi.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Gabi</h2>
+        <h3><b>Price:</b> ₱80 per kilo </h3>
+        <p><b>Status:</b> Available <b>Kilo:</b> 20 </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./vegetables/sibuyas.jpeg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Sibuyas</h2>
+        <h3><b>Price:</b> ₱100 per kilo </h3>
+        <p><b>Status:</b> Available <b>Kilo:</b> 15 </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
