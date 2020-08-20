@@ -1,0 +1,15 @@
+.dashboard-container {
+  margin-top: 10px;
+
+  ion-select {
+    border: 1px solid #D6D6D6;
+    border-radius: 10px;
+    justify-content: center;
+  }
+
+  .dashboard-graph {
+    canvas {
+      margin: 10px auto;
+    }
+  }
+}

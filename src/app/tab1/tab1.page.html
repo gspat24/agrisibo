@@ -7,6 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <canvas #barChart></canvas>
-  <canvas #lineChart></canvas>
+  <div class="dashboard-container">
+    <ion-select value="weekly" interface="action-sheet" (ionChange)="selectOption($event)">
+      <ion-select-option value="weekly">This Week</ion-select-option>
+      <ion-select-option value="monthly">Monthly</ion-select-option>
+    </ion-select>
+
+    <div class="dashboard-graph">
+      <canvas #barChart></canvas>
+      <canvas #lineChart></canvas>
+      <canvas #horizontalBarChart></canvas>
+    </div>
+  </div>
 </ion-content>
