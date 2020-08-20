@@ -1,17 +1,28 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Orders
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="my-animation" *ngFor="let order of orders$ | async" [color]="order.status">
+    <ion-card-header>
+      <ion-card-subtitle>Order #{{ order.number }} <strong *ngIf="order.status === 'danger'">| Paid </strong>
+      </ion-card-subtitle>
+      <ion-card-title>Total Amount: ₱{{ order.total }}</ion-card-title>
+    </ion-card-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item class="ion-activated" *ngFor="let vegetable of order.vegetables">
+      <ion-avatar slot="start">
+        <img [src]="'./vegetables/' + vegetable.name.toLowerCase() + '.jpeg'">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{vegetable.name}}</h2>
+        <h3><b>Kilo:</b> {{ vegetable.kilo }} </h3>
+        <h3><b>Price:</b> ₱{{ vegetable.price }} </h3>
+      </ion-label>
+    </ion-item>
+  </ion-card>
 </ion-content>

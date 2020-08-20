@@ -1,0 +1,16 @@
+@keyframes MyAnimation {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.my-animation {
+    position: relative;
+    animation: MyAnimation 1s;
+    animation-direction: normal;
+}
