@@ -18,6 +18,12 @@ export class LoginOptionsPage implements OnInit {
   ngOnInit() {}
 
   login() {
-    this.router.navigate(['/tabs/tab1']);
+    if (this.loginForm.get('username').value.includes('farmer')) {
+      this.router.navigate(['/tabs/tab1']);
+    }
+
+    if (this.loginForm.get('username').value.includes('consumer')) {
+      this.router.navigate(['/consumer-frontpage']);
+    }
   }
 }
