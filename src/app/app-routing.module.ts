@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'consumer-frontpage',
     loadChildren: () => import('./consumer-frontpage/consumer-frontpage.module').then( m => m.ConsumerFrontpagePageModule)
+  },
+  {
+    path: 'consumer-products',
+    loadChildren: () => import('./consumer-products/consumer-products.module').then( m => m.ConsumerProductsPageModule)
+  },
+  {
+    path: 'consumer-placeorder',
+    loadChildren: () => import('./consumer-placeorder/consumer-placeorder.module').then( m => m.ConsumerPlaceorderPageModule)
   }
 ];
 @NgModule({

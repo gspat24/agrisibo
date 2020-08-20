@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/consumer-frontpage" icon="chevron-back-outline">
+    </ion-back-button>
+    <ion-title class="ion-text-center">
+      Farm-Farm Away
+    </ion-title>
+    <ion-back-button slot="end" defaultHref="" icon=""></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let vegetable of vegetables">
+    <img [src]="'./vegetables/'+ vegetable.image +'.jpeg'">
+    <ion-card-header>
+      <ion-card-subtitle><b>Price:</b> ₱{{ vegetable.price }} per kilo
+        <b *ngIf="vegetable.preorder">(for Pre-order)</b>
+        <p *ngIf="vegetable.preorder"><b>Harvest Date:</b> 8/22/2020 </p>
+      </ion-card-subtitle>
+      <ion-card-title>
+        {{ vegetable.name }}
+        <span>
+          <ion-icon name="add-circle-outline"></ion-icon>&nbsp;
+          <ion-icon name="remove-outline"></ion-icon>
+        </span>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ vegetable.description }}
+    </ion-card-content>
+  </ion-card>
+  <hr/>
+  <hr/>
+  <ion-select value="cod" interface="action-sheet" (ionChange)="selectOption($event)">
+    <ion-select-option value="cod">Cash On Delivery</ion-select-option>
+    <ion-select-option value="op">Online Payment</ion-select-option>
+    <ion-select-option value="fp">For Pickup</ion-select-option>
+  </ion-select>
+  <ion-button class="ion-text-center" expand="block" fill="outline" (click)="placeorder()"> Place Order </ion-button>
+</ion-content>
